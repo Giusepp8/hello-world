@@ -1,0 +1,70 @@
+#A.donuts
+def donuts(count):
+    if count < 10 :
+        print('Number of donuts: %s' % count)
+    else:
+        print('Number of donuts: many')
+
+
+#B.both_ends
+def both_ends(s):
+    if len(s) <= 2:
+        print(None)
+    else:
+        print(s[:2]+s[-2:])
+
+
+#C.fix_start
+def fix_strat(s):
+    i = s.replace(s[0],'*')
+    print(s[0] + i[1:])
+
+
+
+#d.Mixup
+def mix_up(a, b):
+    i = b[:2]
+    e = a[:2]
+    d = b[2:]
+    g = a[2:]
+    print(i + g + " " + e + d)
+
+
+#d.verbing
+def verbing(s) :
+    if len(s) > 2 and s[-3:] != 'ing' :
+        print(s + 'ing')
+    elif len(s) > 2 and s.endswith('ing') :
+        print(s + 'ly')
+    else:
+        return s
+
+#e.not_bad
+def not_bad(s) :
+    s_not = s.find('not')
+    s_bad = s.find('bad')
+    if s_bad > s_not :
+        s = s.replace(s[s_not:(s_bad + 3)], 'good')
+    return s
+
+#f.front_back
+def front_back(a, b) :
+    alenght = len(a)
+    blenght = len(b)
+    if alenght % 2 == 0 :
+        aindex = alenght // 2
+    else:
+        aindex = (alenght // 2) + 1
+    if blenght % 2 == 0 :
+        bindex = blenght // 2
+    else :
+        bindex = (blenght //2) + 1
+    afront = a[0:aindex]
+    aback = a[aindex :]
+    bfront = b[0:bindex]
+    bback = b[bindex:]
+    return afront + bfront + aback + bback
+
+
+
+
